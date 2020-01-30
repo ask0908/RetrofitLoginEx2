@@ -6,7 +6,9 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFormActivityListener {
 
+    // 왜 안되는지 몰겠다
     public static PrefConfig prefConfig;
+    public static ApiInterface apiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
         setContentView(R.layout.activity_main);
 
         prefConfig = new PrefConfig(this);
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
         if (findViewById(R.id.fragment_container) != null) {
             if (savedInstanceState != null) {
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements LoginFragment.OnL
                 getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new WelcomeFragment()).commit();
             } else {
                 getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new LoginFragment()).commit();
-            } // 여기까지 코딩했고 집 가서 핸드폰 연결하고 어떻게 되는지 확인하기(영상 42:47~부터 보면 됨)
+            }
 
         }
     }
