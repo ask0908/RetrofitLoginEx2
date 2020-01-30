@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFormActivityListener {
 
-    // 왜 안되는지 몰겠다
     public static PrefConfig prefConfig;
     public static ApiInterface apiInterface;
 

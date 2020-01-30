@@ -40,6 +40,7 @@ public class RegistrationFragment extends Fragment {
         UserName = view.findViewById(R.id.txt_user_name);
         UserPassword = view.findViewById(R.id.txt_password);
         BnRegister = view.findViewById(R.id.bn_register);
+
         BnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
