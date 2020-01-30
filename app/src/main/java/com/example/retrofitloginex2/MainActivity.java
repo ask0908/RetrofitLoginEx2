@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity implements LoginFragment.OnLoginFormActivityListener {
 
-    // 커밋 테스트
     public static PrefConfig prefConfig;
 
     @Override
